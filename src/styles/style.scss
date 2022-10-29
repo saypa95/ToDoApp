@@ -1,0 +1,63 @@
+@import "~antd/dist/antd.css";
+@import "./reset.scss";
+
+$main-color: #1890ff;
+
+body {
+  background-color: #e5e5e5;
+}
+
+.app {
+  margin: 0 auto;
+  width: 500px;
+  &__header {
+    margin-top: 50px;
+    text-align: center;
+    h1 {
+      font-size: 60px;
+      color: $main-color;
+    }
+  }
+
+  &__add-form {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 10px;
+    gap: 2px;
+  }
+
+  &__todo-list{
+    margin-bottom: 10px;
+  }
+
+  &__todo-item {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__todo-item-checkbox {
+    width: 90%;
+    height: 100%;
+    font-size: 18px;
+    &_completed {
+      text-decoration: line-through;
+      color: $main-color;
+    }
+  }
+
+  &__toolbar{
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+}
