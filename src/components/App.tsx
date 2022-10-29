@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RadioChangeEvent } from "antd";
 import uuid from "react-uuid";
 
@@ -11,8 +11,12 @@ import { ITodo, Filter } from "../types/types";
 import "../styles/style.scss";
 
 const App: React.FC = () => {
-  const [todos, setTodos] = useState<ITodo[]>([]);
+  const [todos, setTodos] = useState<ITodo[]>(localStorage.todos ? JSON.parse(localStorage.todos) : []);
   const [filter, setFilter] = useState<Filter>("all");
+  
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = (title: string): void => {
     if (title) {
