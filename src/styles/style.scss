@@ -29,6 +29,14 @@ body {
     gap: 2px;
   }
 
+  &__add-form-input{
+    width: 93%;
+  }
+
+  &__add-form-btn{
+    width: 32px;
+  }
+
   &__todo-list{
     margin-bottom: 10px;
   }
@@ -41,16 +49,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &_completed{
+      .app__todo-item-checkbox{
+        text-decoration: line-through;
+      color: $main-color;
+      }
+    }
   }
 
   &__todo-item-checkbox {
     width: 90%;
     height: 100%;
     font-size: 18px;
-    &_completed {
-      text-decoration: line-through;
-      color: $main-color;
-    }
+    // &_completed {
+    //   text-decoration: line-through;
+    //   color: $main-color;
+    // }
   }
 
   &__toolbar{

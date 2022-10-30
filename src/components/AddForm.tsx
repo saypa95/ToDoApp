@@ -24,14 +24,14 @@ const AddForm: React.FC = () => {
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         onKeyDown={handleKeyDown}
-        style={{ width: "93%" }}
+        className="app__add-form-input"
       />
       <Button
         type="primary"
         icon={<PlusOutlined />}
         disabled={!inputValue.length}
         onClick={onAdd}
-        style={{ width: "32px" }}
+        className="app__add-form-btn"
       />
     </div>
   );
